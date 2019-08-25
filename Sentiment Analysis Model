@@ -1,0 +1,12 @@
+import numpy as np
+import pandas as pd
+import scipy
+import sklearn
+import matplotlib.pyplot as plt
+import seaborn as sns
+import csv
+import intake
+
+df = pd.read_csv("/Users/williammosconiii/Desktop/sentiment-labelled-sentences/imdb_labelled.txt", 'r', header = None, names = ['Data'])
+df[("Review", "Sentiment")] = df.Data.str.split(".", expand=True)
+df
